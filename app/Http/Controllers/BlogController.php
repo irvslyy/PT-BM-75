@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Blog;
+use Image;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -16,7 +17,11 @@ class BlogController extends Controller
         $blog = Blog::all();
         return view('blog.read',compact('blog'));
     }
-
+    public function indexWelcome()
+    {
+        $blog = Blog::all()->take(3);
+        return view('welcome',compact('blog'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -35,7 +40,26 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $blog = new Blog;
+        
+        
+        $originalImage= $request->file('IMAGE');
+        $thumbnailImage = Image::make($originalImage);
+        $thumbnailPath = public_path().'/thumbnail/';
+        $originalPath = public_path().'/img/';
+        $thumbnailImage->save($originalPath.time().$originalImage->getClientOriginalName());
+        $thumbnailImage->resize(348,214);
+        $thumbnailImage->save($thumbnailPath.time().$originalImage->getClientOriginalName()); 
+
+        $blog= new Blog();
+        $blog->TITLE = $request->TITLE;
+        $blog->DESC = $request->DESC;
+        $blog->IMAGE = time().$originalImage->getClientOriginalName();
+
+
+        $blog->save();
+
+        return back();
     }
 
     /**
@@ -57,7 +81,8 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+        $blog = Blog::find($id);
+        return view('blog.edit',compact('blog'));
     }
 
     /**
@@ -69,7 +94,12 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $blog = Blog::find($id);
+        $blog->TITLE = $request->TITLE;
+        $blog->DESC = $request->DESC;
+        $blog->save();
+
+        return back();
     }
 
     /**
@@ -80,6 +110,9 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $blog = Blog::find($id);
+        $blog->delete();
+
+        return back();
     }
 }

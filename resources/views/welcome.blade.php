@@ -97,7 +97,7 @@
                 <div class="col-12">
                     <div class="fancy-hero-content text-center">
                        
-                        <h2>We Provide services. Electrical, Mechanical & Air system</h2>
+                        <h2>Elektrikal, Mekanikal dan Tata Udara</h2>
                         <a href="#" class="btn fancy-btn fancy-active">About Us</a>
                         <a href="#" class="btn fancy-btn">Get a quote</a>
                     </div>
@@ -323,39 +323,18 @@
             </div>
 
             <div class="row">
-                <!-- Single Blog -->
+                @foreach($blog as $blogs)
                 <div class="col-12 col-md-4">
                     <div class="single-blog-area wow fadeInUp" data-wow-delay="0.5s">
-                        <img src="img/blog-img/blog-1.jpg" alt="">
+                        <img src="{{asset('/thumbnail/'. $blogs->IMAGE)}}" alt="err">
                         <div class="blog-content">
-                            <h5><a href="static-page.html">Electrical</a></h5>
-                            <p>The Fancy that recognize the talent and effort of the best web designers, developers and agencies in the world.</p>
-                            <a href="static-page.html">Learn More</a>
+                            <h5><a href="#">{{str_limit($blogs->TITLE,35)}}</a></h5>
+                            <p>{{str_limit($blogs->DESC,100)}}</p>
+                            <a href="#">read More</a>
                         </div>
                     </div>
                 </div>
-                <!-- Single Blog -->
-                <div class="col-12 col-md-4">
-                    <div class="single-blog-area wow fadeInUp" data-wow-delay="1s">
-                        <img src="img/blog-img/blog-2.jpg" alt="">
-                        <div class="blog-content">
-                            <h5><a href="static-page.html">Mechanical</a></h5>
-                            <p>The Fancy that recognize the talent and effort of the best web designers, developers and agencies in the world.</p>
-                            <a href="static-page.html">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Blog -->
-                <div class="col-12 col-md-4">
-                    <div class="single-blog-area wow fadeInUp" data-wow-delay="1.5s">
-                        <img src="img/blog-img/blog-3.jpg" alt="">
-                        <div class="blog-content">
-                            <h5><a href="static-page.html">Air system</a></h5>
-                            <p>The Fancy that recognize the talent and effort of the best web designers, developers and agencies in the world.</p>
-                            <a href="static-page.html">Learn More</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

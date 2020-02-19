@@ -27,7 +27,7 @@
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<a href="index.html"><img src="{{asset('img/bg-img/logo-dark.png')}}" alt="Klorofil Logo" class="img-responsive logo"></a>
+				<a href="index.html"><img src="{{asset('img/logo/BM.png')}}" alt="Klorofil Logo" class="img-responsive logo"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
@@ -42,7 +42,7 @@
 		
 				<div id="navbar-menu">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
+						<!-- <li class="dropdown">
 							<a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
 								<i class="lnr lnr-alarm"></i>
 								<span class="badge bg-danger">5</span>
@@ -55,7 +55,7 @@
 								<li><a href="#" class="notification-item"><span class="dot bg-success"></span>Your request has been approved</a></li>
 								<li><a href="#" class="more">See all notifications</a></li>
 							</ul>
-						</li>
+						</li> -->
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-question-circle"></i> <span>Help</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
@@ -66,7 +66,7 @@
 							</ul>
 						</li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle"> <span>user</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="" class="img-circle"> <span>user</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
 								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
 								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
@@ -85,19 +85,33 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<li><a href="{{route('home')}}" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>						
-						<li><a href="panels.html" class=""><i class="lnr lnr-file-empty"></i><span>create post</span></a></li>
+						<li><a href="{{route('home')}}" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>	
+						<li><a href="{{route('welcome')}}" target="_blank"><span>view blog</span></a></li>						
+						<li><a href="{{route('blog.index')}}" class=""><i class="fas fa-pen"></i><span>create post</span></a></li>
+						<li><a href="" class=""><i class="fas fa-calculator"></i><span>accounting</span></a></li>
+						<li><a href="" class=""><i class="fas fa-shopping-cart"></i><span>data material</span></a></li>
+						<li><a href="{{route('report.index')}}" class=""><i class="fas fa-chart-line"></i><span>reporting</span></a></li>
 						<li>
-							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i><span>Manage Users</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fas fa-hard-hat"></i><span>project manage</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="subPages" class="collapse ">
 								<ul class="nav">
-									<li><a href="page-profile.html" class="">Profile</a></li>
-									<li><a href="page-login.html" class="">Login</a></li>
-									<li><a href="page-lockscreen.html" class="">Lockscreen</a></li>
+									<li><a href="{{route('project.index')}}" class="">project view</a></li>
+									<li><a href="{{route('project.create')}}" class="">add project</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="{{route('inventory')}}" class=""><i class="fas fa-archive"></i><span>inventory</span></a></li>
+						<li>
+							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fas fa-users"></i><span>Manage Users</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages" class="collapse ">
+								<ul class="nav">
+									<li><a href="" class="">users</a></li>
+									<li><a href="" class="">log activity users</a></li>
 								</ul>
 							</div>
 						</li>
 						<li><a href="panels.html" class=""><i class="lnr lnr-cog"></i> <span>Setting</span></a></li>
+						<li><a href="{{route('welcome')}}" target="_blank"><i class="fas fa-trash"></i><span>trash</span></a></li>				
 					</ul>
 				</nav>
 			</div>
@@ -125,127 +139,28 @@
 	<!-- Javascript -->
 	<script src="{{asset('klorofil/vendor/jquery/jquery.min.js')}}"></script>
 	<script src="{{asset('klorofil/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-	<script src="{{asset('klorofil/vendor/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
-	<script src="{{asset('klorofil/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js')}}"></script>
+	
 	<script src="{{asset('klorofil/vendor/chartist/js/chartist.min.js')}}"></script>
 	<script src="{{asset('klorofil/scripts/klorofil-common.js')}}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+	<script src="{{asset('jschart/chart.js')}}"></script>
+	<script src="{{asset('jschart/chart.min.js')}}"></script>
+	<script src="{{asset('js/date-picker.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.0/jquery.typeahead.min.js"></script>
 	<script>
-	$(function() {
-		var data, options;
 
-		// headline charts
-		data = {
-			labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-			series: [
-				[23, 29, 24, 40, 25, 24, 35],
-				[14, 25, 18, 34, 29, 38, 44],
-			]
-		};
-
-		options = {
-			height: 300,
-			showArea: true,
-			showLine: false,
-			showPoint: false,
-			fullWidth: true,
-			axisX: {
-				showGrid: false
-			},
-			lineSmooth: false,
-		};
-
-		new Chartist.Line('#headline-chart', data, options);
-
-
-		// visits trend charts
-		data = {
-			labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-			series: [{
-				name: 'series-real',
-				data: [200, 380, 350, 320, 410, 450, 570, 400, 555, 620, 750, 900],
-			}, {
-				name: 'series-projection',
-				data: [240, 350, 360, 380, 400, 450, 480, 523, 555, 600, 700, 800],
-			}]
-		};
-
-		options = {
-			fullWidth: true,
-			lineSmooth: false,
-			height: "270px",
-			low: 0,
-			high: 'auto',
-			series: {
-				'series-projection': {
-					showArea: true,
-					showPoint: false,
-					showLine: false
-				},
-			},
-			axisX: {
-				showGrid: false,
-
-			},
-			axisY: {
-				showGrid: false,
-				onlyInteger: true,
-				offset: 0,
-			},
-			chartPadding: {
-				left: 20,
-				right: 20
+	var path = "{{ route('autocomplete') }}";
+		$('input.typeahead').typeahead({
+			source:  function (query, process) {
+			return $.get(path, { query: query }, function (data) {
+					return process(data);
+				});
 			}
-		};
-
-		new Chartist.Line('#visits-trends-chart', data, options);
-
-
-		// visits chart
-		data = {
-			labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-			series: [
-				[6384, 6342, 5437, 2764, 3958, 5068, 7654]
-			]
-		};
-
-		options = {
-			height: 300,
-			axisX: {
-				showGrid: false
-			},
-		};
-
-		new Chartist.Bar('#visits-chart', data, options);
-
-
-		// real-time pie chart
-		var sysLoad = $('#system-load').easyPieChart({
-			size: 130,
-			barColor: function(percent) {
-				return "rgb(" + Math.round(200 * percent / 100) + ", " + Math.round(200 * (1.1 - percent / 100)) + ", 0)";
-			},
-			trackColor: 'rgba(245, 245, 245, 0.8)',
-			scaleColor: false,
-			lineWidth: 5,
-			lineCap: "square",
-			animate: 800
 		});
 
-		var updateInterval = 3000; // in milliseconds
-
-		setInterval(function() {
-			var randomVal;
-			randomVal = getRandomInt(0, 100);
-
-			sysLoad.data('easyPieChart').update(randomVal);
-			sysLoad.find('.percent').text(randomVal);
-		}, updateInterval);
-
-		function getRandomInt(min, max) {
-			return Math.floor(Math.random() * (max - min + 1)) + min;
-		}
-
-	});
+		$('.date').datepicker({  
+			format: 'mm-dd-yyyy'
+		}); 
 	</script>
 </body>
 
