@@ -2,6 +2,7 @@
 
 <div class="container-fluid">
     <div class="row">
+       
         <div class="col-md-8">
             <form action="<?php echo e(route('blog.post')); ?>" method="POST" enctype="multipart/form-data">
             <?php echo csrf_field(); ?>
@@ -14,7 +15,7 @@
                     </div>
                     <div class="form-group">
                         <label for="desc">Desc</label>
-                        <textarea class="form-control" id="" rows="3" name="DESC" placeholder="Enter Desc" required></textarea>
+                        <textarea class="form-control" id="article-ckeditor" rows="3" name="DESC" placeholder="Enter Desc" required></textarea>
                     </div>
                     
                 </div>
@@ -33,8 +34,13 @@
     </div>
 </div>
 
-
 <?php $__env->stopSection(); ?>
+
+
+
+
+
+
 
 
 

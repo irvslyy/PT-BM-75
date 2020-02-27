@@ -139,6 +139,9 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+        Yoeunes\Toastr\ToastrServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
+        Unisharp\Ckeditor\ServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Akaunting\Firewall\Provider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
@@ -193,6 +196,7 @@ return [
     */
 
     'aliases' => [
+        'PDF' => Barryvdh\DomPDF\Facade::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'App' => Illuminate\Support\Facades\App::class,

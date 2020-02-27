@@ -30,7 +30,7 @@
 					<div class="left">
 						<div class="content">
 							<div class="header">
-								<div class="logo text-center"><img src="<?php echo e(asset('img/bg-img/logo-dark.png')); ?>" alt="Klorofil Logo"></div>
+								<div class="logo text-center"><img src="<?php echo e(asset('img/logo/BM.png')); ?>" alt="Klorofil Logo"></div>
 								<p class="lead">Login to your account</p>
 							</div>
 							<form class="form-auth-small" method="POST" action="<?php echo e(route('login')); ?>">
@@ -56,6 +56,7 @@
 							</form>
 						</div>
 					</div>
+					
 					<div class="right">
 						<div class="overlay"></div>
 						<div class="content text">
@@ -63,6 +64,7 @@
 							<p>by Irvs team</p>
 						</div>
 					</div>
+
 					<div class="clearfix"></div>
 				</div>
 			</div>

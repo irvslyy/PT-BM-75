@@ -1,8 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\User;
+use DB;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+
 
 class HomeController extends Controller
 {
@@ -15,7 +19,11 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
-
+    public function Users()
+    {
+        $users = DB::table('users')->get();
+        return view('layouts.app',compact('users'));
+    }
     /**
      * Show the application dashboard.
      *
@@ -23,6 +31,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // $role = Role::create(['name' => 'writer']);
+        // $permission = Permission::create(['name' => 'edit articles']);
+        // auth()->user()->givePermissionTo('edit articles');
+     
+
         return view('home');
     }
 }

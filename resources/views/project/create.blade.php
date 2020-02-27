@@ -5,6 +5,8 @@
 
 <div class="container-fluid">
     <div class="row">
+
+
         <div class="col-md-12">
             <form action="{{route('project.store')}}" method="POST">
             @csrf

@@ -6,6 +6,17 @@
       0 => 'Akaunting\\Firewall\\Provider',
     ),
   ),
+  'barryvdh/laravel-dompdf' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Barryvdh\\DomPDF\\ServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'PDF' => 'Barryvdh\\DomPDF\\Facade',
+    ),
+  ),
   'beyondcode/laravel-dump-server' => 
   array (
     'providers' => 
@@ -88,6 +99,17 @@
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     ),
   ),
+  'shetabit/visitor' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Shetabit\\Visitor\\Provider\\VisitorServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Visitor' => 'Shetabit\\Visitor\\Facade\\Visitor',
+    ),
+  ),
   'spatie/laravel-medialibrary' => 
   array (
     'providers' => 
@@ -100,6 +122,17 @@
     'providers' => 
     array (
       0 => 'Spatie\\Permission\\PermissionServiceProvider',
+    ),
+  ),
+  'yoeunes/toastr' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Yoeunes\\Toastr\\ToastrServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Toastr' => 'Yoeunes\\Toastr\\Facades\\Toastr',
     ),
   ),
 );

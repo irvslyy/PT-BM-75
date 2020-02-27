@@ -9,6 +9,7 @@
         <div class="col-md-12">
             <div class="panel">
                 <div class="panel-heading"><h3 class="panel-title">Blog</h3></div>
+                <h5></h5>
                 <div class="panel-body">
                 <a href="{{route('blog.create')}}" class="btn btn-primary">create post now</a>
                     <table class="table">
@@ -34,10 +35,31 @@
                                         <a href="{{route('blog.edit',$blogs->id)}}" class="btn btn-primary"> <i class="fas fa-pen"></i> </a>
                                     </div>
                                     <div class="col-md-5">
+                                    <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-trash"></i>  </button>
+
                                         <form action="{{route('blog.delete',$blogs->id)}}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                            <button type="submit" class="btn btn-danger"> <i class="fa fa-trash"></i>  </button>
+                                             <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        are you sure to delete?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-primary">Save changes</button>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>  
                                         </form>
                                     </div>
                                  </div>
@@ -55,3 +77,7 @@
 
 
 @endsection
+
+
+
+   

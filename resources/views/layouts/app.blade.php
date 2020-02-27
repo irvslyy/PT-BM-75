@@ -13,10 +13,10 @@
 	<link rel="stylesheet" href="{{asset('klorofil/vendor/linearicons/style.css')}}">
 	<link rel="stylesheet" href="{{asset('klorofil/vendor/chartist/css/chartist-custom.css')}}">
 	<!-- MAIN CSS -->
+	@toastr_css 
 	<link rel="stylesheet" href="{{asset('klorofil/css/main.css')}}">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 	<!-- ICONS -->
-	<script src="https://kit.fontawesome.com/56a5f81545.js" crossorigin="anonymous"></script>
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
 </head>
@@ -61,16 +61,14 @@
 							<ul class="dropdown-menu">
 								<li><a href="#">Basic Use</a></li>
 								<li><a href="#">Working With Data</a></li>
-								<li><a href="#">Security</a></li>
-								<li><a href="#">Troubleshooting</a></li>
 							</ul>
 						</li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="" class="img-circle"> <span>user</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="" class="img-circle"> <span>  {{Auth::user()->name}} </span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
 								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
-								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
-								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
+								<!-- <li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
+								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li> -->
 								<li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
 							</ul>
 						</li>
@@ -85,14 +83,14 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<li><a href="{{route('home')}}" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>	
+						<li><a href="{{route('home')}}" class="active"><i class="lnr lnr-home"></i> Dashboard</a></li>	
 						<li><a href="{{route('welcome')}}" target="_blank"><span>view blog</span></a></li>						
-						<li><a href="{{route('blog.index')}}" class=""><i class="fas fa-pen"></i><span>create post</span></a></li>
-						<li><a href="" class=""><i class="fas fa-calculator"></i><span>accounting</span></a></li>
-						<li><a href="" class=""><i class="fas fa-shopping-cart"></i><span>data material</span></a></li>
-						<li><a href="{{route('report.index')}}" class=""><i class="fas fa-chart-line"></i><span>reporting</span></a></li>
+						<li><a href="{{route('blog.index')}}" class=""> <i class="fas fa-pen"></i> create post</a></li>
+						<li><a href="" class=""> <i class="fas fa-calculator"></i> accounting</a></li>
+						<li><a href="{{route('material.index')}}" class=""> <i class="fas fa-shopping-cart"></i> data material</a></li>
+						<li><a href="{{route('report.index')}}" class=""> <i class="fas fa-chart-line"></i> reporting</a></li>
 						<li>
-							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fas fa-hard-hat"></i><span>project manage</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fas fa-hard-hat"></i> project manage <i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="subPages" class="collapse ">
 								<ul class="nav">
 									<li><a href="{{route('project.index')}}" class="">project view</a></li>
@@ -100,18 +98,10 @@
 								</ul>
 							</div>
 						</li>
-						<li><a href="{{route('inventory')}}" class=""><i class="fas fa-archive"></i><span>inventory</span></a></li>
-						<li>
-							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fas fa-users"></i><span>Manage Users</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-							<div id="subPages" class="collapse ">
-								<ul class="nav">
-									<li><a href="" class="">users</a></li>
-									<li><a href="" class="">log activity users</a></li>
-								</ul>
-							</div>
-						</li>
+						<li><a href="{{route('inventory')}}" class=""><i class="fas fa-archive"></i> inventory </a></li>
+						<li><a href="{{route('manage.users')}}" class=""><i class="fas fa-users"></i> </i> Manage Users </a></li>
 						<li><a href="panels.html" class=""><i class="lnr lnr-cog"></i> <span>Setting</span></a></li>
-						<li><a href="{{route('welcome')}}" target="_blank"><i class="fas fa-trash"></i><span>trash</span></a></li>				
+						<li><a href="{{route('welcome')}}" target="_blank"><i class="fas fa-trash"></i> trash</a></li>				
 					</ul>
 				</nav>
 			</div>
@@ -137,6 +127,10 @@
 	</div>
 	<!-- END WRAPPER -->
 	<!-- Javascript -->
+	<script defer src="{{asset('js/font/brands.js')}}"></script>
+    <script defer src="{{asset('js/font/solid.js')}}"></script>
+    <script defer src="{{asset('js/font/fontawesome.js')}}"></script>
+
 	<script src="{{asset('klorofil/vendor/jquery/jquery.min.js')}}"></script>
 	<script src="{{asset('klorofil/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 	
@@ -145,8 +139,15 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
 	<script src="{{asset('jschart/chart.js')}}"></script>
 	<script src="{{asset('jschart/chart.min.js')}}"></script>
+	<script src="{{asset('jschart/system.js')}}"></script>
+	<script src="{{asset('js/jquery.easypiechart.min.js')}}"></script>
 	<script src="{{asset('js/date-picker.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.0/jquery.typeahead.min.js"></script>
+	<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+	@toastr_js 
+	@toastr_render 
+
+
 	<script>
 
 	var path = "{{ route('autocomplete') }}";
@@ -161,6 +162,12 @@
 		$('.date').datepicker({  
 			format: 'mm-dd-yyyy'
 		}); 
+		$('.date-material').datepicker({  
+			format: 'mm-dd-yyyy'
+		}); 
+
+		CKEDITOR.replace( 'article-ckeditor' );
+
 	</script>
 </body>
 

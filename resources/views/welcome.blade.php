@@ -74,9 +74,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="static-page.html">Blog</a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a class="nav-link" href="#">Shop</a>
-                                </li>
+                                </li> -->
                                 <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Contact</a>
                                 </li>
@@ -99,7 +99,7 @@
                        
                         <h2>Elektrikal, Mekanikal dan Tata Udara</h2>
                         <a href="#" class="btn fancy-btn fancy-active">About Us</a>
-                        <a href="#" class="btn fancy-btn">Get a quote</a>
+          
                     </div>
                 </div>
             </div>
@@ -328,8 +328,8 @@
                     <div class="single-blog-area wow fadeInUp" data-wow-delay="0.5s">
                         <img src="{{asset('/thumbnail/'. $blogs->IMAGE)}}" alt="err">
                         <div class="blog-content">
-                            <h5><a href="#">{{str_limit($blogs->TITLE,35)}}</a></h5>
-                            <p>{{str_limit($blogs->DESC,100)}}</p>
+                            <h5><a href="#">{!!str_limit($blogs->TITLE,35)!!}</a></h5>
+                            <p>{!!str_limit($blogs->DESC,100)!!}</p>
                             <a href="#">read More</a>
                         </div>
                     </div>
@@ -436,7 +436,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div>
     </footer>
     <!-- ***** Footer Area End ***** -->
-    <script src="https://kit.fontawesome.com/56a5f81545.js" crossorigin="anonymous"></script>
+    <script defer src="{{asset('js/font/brands.js')}}"></script>
+    <script defer src="{{asset('js/font/solid.js')}}"></script>
+    <script defer src="{{asset('js/font/fontawesome.js')}}"></script>
     <!-- jQuery-2.2.4 js -->
     <script src="{{asset('js/jquery.min.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -446,3 +448,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Active JS -->
     <script src="{{asset('js/active.js')}}"></script>
 </body>
+
+
+
+

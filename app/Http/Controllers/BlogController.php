@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Blog;
 use Image;
+use DB;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -58,7 +59,8 @@ class BlogController extends Controller
 
 
         $blog->save();
-
+        
+        toastr()->success('Post Success!'); 
         return back();
     }
 
@@ -113,6 +115,15 @@ class BlogController extends Controller
         $blog = Blog::find($id);
         $blog->delete();
 
+        toastr()->success('Delete Success!'); 
         return back();
     }
+    public function testing()
+    {
+       
+        return view('blog.read',compact('user'));
+    }
 }
+
+
+

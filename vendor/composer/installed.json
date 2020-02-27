@@ -65,6 +65,64 @@
         ]
     },
     {
+        "name": "barryvdh/laravel-dompdf",
+        "version": "v0.8.5",
+        "version_normalized": "0.8.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/barryvdh/laravel-dompdf.git",
+            "reference": "7393732b2f3a3ee357974cbb0c46c9b65b84dad1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/barryvdh/laravel-dompdf/zipball/7393732b2f3a3ee357974cbb0c46c9b65b84dad1",
+            "reference": "7393732b2f3a3ee357974cbb0c46c9b65b84dad1",
+            "shasum": ""
+        },
+        "require": {
+            "dompdf/dompdf": "^0.8",
+            "illuminate/support": "^5.5|^6",
+            "php": ">=7"
+        },
+        "time": "2019-08-23T14:30:33+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.8-dev"
+            },
+            "laravel": {
+                "providers": [
+                    "Barryvdh\\DomPDF\\ServiceProvider"
+                ],
+                "aliases": {
+                    "PDF": "Barryvdh\\DomPDF\\Facade"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Barryvdh\\DomPDF\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Barry vd. Heuvel",
+                "email": "barryvdh@gmail.com"
+            }
+        ],
+        "description": "A DOMPDF Wrapper for Laravel",
+        "keywords": [
+            "dompdf",
+            "laravel",
+            "pdf"
+        ]
+    },
+    {
         "name": "beyondcode/laravel-dump-server",
         "version": "1.2.2",
         "version_normalized": "1.2.2.0",
@@ -125,6 +183,64 @@
         "keywords": [
             "beyondcode",
             "laravel-dump-server"
+        ]
+    },
+    {
+        "name": "composer/ca-bundle",
+        "version": "1.2.6",
+        "version_normalized": "1.2.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/composer/ca-bundle.git",
+            "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/composer/ca-bundle/zipball/47fe531de31fca4a1b997f87308e7d7804348f7e",
+            "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e",
+            "shasum": ""
+        },
+        "require": {
+            "ext-openssl": "*",
+            "ext-pcre": "*",
+            "php": "^5.3.2 || ^7.0 || ^8.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.8.35 || ^5.7 || 6.5 - 8",
+            "psr/log": "^1.0",
+            "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0"
+        },
+        "time": "2020-01-13T10:02:55+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Composer\\CaBundle\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jordi Boggiano",
+                "email": "j.boggiano@seld.be",
+                "homepage": "http://seld.be"
+            }
+        ],
+        "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
+        "keywords": [
+            "cabundle",
+            "cacert",
+            "certificate",
+            "ssl",
+            "tls"
         ]
     },
     {
@@ -342,6 +458,74 @@
             "lexer",
             "parser"
         ]
+    },
+    {
+        "name": "dompdf/dompdf",
+        "version": "v0.8.5",
+        "version_normalized": "0.8.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/dompdf/dompdf.git",
+            "reference": "6782abfc090b132134cd6cea0ec6d76f0fce2c56"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/dompdf/dompdf/zipball/6782abfc090b132134cd6cea0ec6d76f0fce2c56",
+            "reference": "6782abfc090b132134cd6cea0ec6d76f0fce2c56",
+            "shasum": ""
+        },
+        "require": {
+            "ext-dom": "*",
+            "ext-mbstring": "*",
+            "phenx/php-font-lib": "^0.5.1",
+            "phenx/php-svg-lib": "^0.3.3",
+            "php": "^7.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^7.5",
+            "squizlabs/php_codesniffer": "^3.5"
+        },
+        "suggest": {
+            "ext-gd": "Needed to process images",
+            "ext-gmagick": "Improves image processing performance",
+            "ext-imagick": "Improves image processing performance"
+        },
+        "time": "2020-02-20T03:52:51+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-develop": "0.7-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Dompdf\\": "src/"
+            },
+            "classmap": [
+                "lib/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Ménager",
+                "email": "fabien.menager@gmail.com"
+            },
+            {
+                "name": "Brian Sweeney",
+                "email": "eclecticgeek@gmail.com"
+            },
+            {
+                "name": "Gabriel Bull",
+                "email": "me@gabrielbull.com"
+            }
+        ],
+        "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
+        "homepage": "https://github.com/dompdf/dompdf"
     },
     {
         "name": "dragonmantank/cron-expression",
@@ -2782,6 +2966,87 @@
         "description": "Library for handling version information and constraints"
     },
     {
+        "name": "phenx/php-font-lib",
+        "version": "0.5.1",
+        "version_normalized": "0.5.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PhenX/php-font-lib.git",
+            "reference": "760148820110a1ae0936e5cc35851e25a938bc97"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PhenX/php-font-lib/zipball/760148820110a1ae0936e5cc35851e25a938bc97",
+            "reference": "760148820110a1ae0936e5cc35851e25a938bc97",
+            "shasum": ""
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.8"
+        },
+        "time": "2017-09-13T16:14:37+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FontLib\\": "src/FontLib"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Ménager",
+                "email": "fabien.menager@gmail.com"
+            }
+        ],
+        "description": "A library to read, parse, export and make subsets of different types of font files.",
+        "homepage": "https://github.com/PhenX/php-font-lib"
+    },
+    {
+        "name": "phenx/php-svg-lib",
+        "version": "v0.3.3",
+        "version_normalized": "0.3.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PhenX/php-svg-lib.git",
+            "reference": "5fa61b65e612ce1ae15f69b3d223cb14ecc60e32"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PhenX/php-svg-lib/zipball/5fa61b65e612ce1ae15f69b3d223cb14ecc60e32",
+            "reference": "5fa61b65e612ce1ae15f69b3d223cb14ecc60e32",
+            "shasum": ""
+        },
+        "require": {
+            "sabberworm/php-css-parser": "^8.3"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^5.5|^6.5"
+        },
+        "time": "2019-09-11T20:02:13+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Svg\\": "src/Svg"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Ménager",
+                "email": "fabien.menager@gmail.com"
+            }
+        ],
+        "description": "A library to read, parse and export to PDF SVG files.",
+        "homepage": "https://github.com/PhenX/php-svg-lib"
+    },
+    {
         "name": "php-http/guzzle6-adapter",
         "version": "v1.1.1",
         "version_normalized": "1.1.1.0",
@@ -4024,6 +4289,53 @@
         ]
     },
     {
+        "name": "sabberworm/php-css-parser",
+        "version": "8.3.0",
+        "version_normalized": "8.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sabberworm/PHP-CSS-Parser.git",
+            "reference": "91bcc3e3fdb7386c9a2e0e0aa09ca75cc43f121f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sabberworm/PHP-CSS-Parser/zipball/91bcc3e3fdb7386c9a2e0e0aa09ca75cc43f121f",
+            "reference": "91bcc3e3fdb7386c9a2e0e0aa09ca75cc43f121f",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2"
+        },
+        "require-dev": {
+            "codacy/coverage": "^1.4",
+            "phpunit/phpunit": "~4.8"
+        },
+        "time": "2019-02-22T07:42:52+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Sabberworm\\CSS": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Raphael Schweikert"
+            }
+        ],
+        "description": "Parser for CSS Files written in PHP",
+        "homepage": "http://www.sabberworm.com/blog/2010/6/10/php-css-parser",
+        "keywords": [
+            "css",
+            "parser",
+            "stylesheet"
+        ]
+    },
+    {
         "name": "sebastian/code-unit-reverse-lookup",
         "version": "1.0.1",
         "version_normalized": "1.0.1.0",
@@ -4609,6 +4921,75 @@
         "homepage": "https://github.com/sebastianbergmann/version"
     },
     {
+        "name": "shetabit/visitor",
+        "version": "v2.0.1",
+        "version_normalized": "2.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/shetabit/visitor.git",
+            "reference": "4d60c0653e52cc8cc3e88db51b3449c4773e6b27"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/shetabit/visitor/zipball/4d60c0653e52cc8cc3e88db51b3449c4773e6b27",
+            "reference": "4d60c0653e52cc8cc3e88db51b3449c4773e6b27",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": ">=5.1",
+            "jenssegers/agent": "^2.6",
+            "php": ">=7.2",
+            "ua-parser/uap-php": "^3.9"
+        },
+        "require-dev": {
+            "orchestra/testbench": "^4.0",
+            "phpunit/phpunit": ">=7.5",
+            "squizlabs/php_codesniffer": "^3.4"
+        },
+        "time": "2019-12-05T07:37:31+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Shetabit\\Visitor\\Provider\\VisitorServiceProvider"
+                ],
+                "aliases": {
+                    "Visitor": "Shetabit\\Visitor\\Facade\\Visitor"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Shetabit\\Visitor\\": "src"
+            },
+            "files": [
+                "src/helpers.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Mahdi Khanzadi",
+                "email": "khanzadimahdi@gmail.com",
+                "homepage": "https://github.com/visitor",
+                "role": "Developer"
+            }
+        ],
+        "description": "Laravel visitor",
+        "homepage": "https://github.com/shetabit/visitor",
+        "keywords": [
+            "parse laravel user agents",
+            "shetabit",
+            "trace laravel visitors",
+            "track laravel visitors",
+            "visitor"
+        ]
+    },
+    {
         "name": "spatie/image",
         "version": "1.7.6",
         "version_normalized": "1.7.6.0",
@@ -4713,6 +5094,64 @@
         "homepage": "https://github.com/spatie/image-optimizer",
         "keywords": [
             "image-optimizer",
+            "spatie"
+        ]
+    },
+    {
+        "name": "spatie/laravel-backup",
+        "version": "2.0.3",
+        "version_normalized": "2.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/spatie/laravel-backup.git",
+            "reference": "f14ca4ed10bda2cea054230b01623e7e62a1262f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/spatie/laravel-backup/zipball/f14ca4ed10bda2cea054230b01623e7e62a1262f",
+            "reference": "f14ca4ed10bda2cea054230b01623e7e62a1262f",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/console": "5.*",
+            "illuminate/support": "5.*",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "laravel/framework": "5.*",
+            "mockery/mockery": "0.9.*",
+            "orchestra/testbench": "~3.0",
+            "phpunit/phpunit": "4.*",
+            "scrutinizer/ocular": "~1.1"
+        },
+        "time": "2015-03-03T15:50:10+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Spatie\\Backup\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Freek Van der Herten",
+                "email": "freek@spatie.be",
+                "homepage": "https://murze.be",
+                "role": "Developer"
+            }
+        ],
+        "description": "Backup command for Laravel 5 applications",
+        "homepage": "https://github.com/freekmurze/laravel-backup",
+        "keywords": [
+            "backup",
+            "database",
+            "laravel 5",
+            "laravel-backup",
+            "mysql",
             "spatie"
         ]
     },
@@ -6104,6 +6543,121 @@
         "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles"
     },
     {
+        "name": "ua-parser/uap-php",
+        "version": "v3.9.6",
+        "version_normalized": "3.9.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ua-parser/uap-php.git",
+            "reference": "76064d58ad5fc4ee92f31b4bb3c56319c10d92df"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ua-parser/uap-php/zipball/76064d58ad5fc4ee92f31b4bb3c56319c10d92df",
+            "reference": "76064d58ad5fc4ee92f31b4bb3c56319c10d92df",
+            "shasum": ""
+        },
+        "require": {
+            "composer/ca-bundle": "^1.1",
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "<8",
+            "symfony/console": "^2.0 || ^3.0 || ^4.0",
+            "symfony/filesystem": "^2.0 || ^3.0 || ^4.0",
+            "symfony/finder": "^2.0 || ^3.0 || ^4.0",
+            "symfony/yaml": "^2.0 || ^3.0 || ^4.0"
+        },
+        "suggest": {
+            "symfony/console": "Required for CLI usage - ^2.0 || ^3.0 || ^4.0",
+            "symfony/filesystem": "Required for CLI usage - 2.0 || ^3.0 || ^4.0",
+            "symfony/finder": "Required for CLI usage - ^2.0 || ^3.0 || ^4.0",
+            "symfony/yaml": "Required for CLI usage - ^4.0 || ^5.0"
+        },
+        "time": "2020-02-12T09:54:10+00:00",
+        "bin": [
+            "bin/uaparser"
+        ],
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "UAParser\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Dave Olsen",
+                "email": "dmolsen@gmail.com"
+            },
+            {
+                "name": "Lars Strojny",
+                "email": "lars@strojny.net"
+            }
+        ],
+        "description": "A multi-language port of Browserscope's user agent parser."
+    },
+    {
+        "name": "unisharp/laravel-ckeditor",
+        "version": "4.7.2",
+        "version_normalized": "4.7.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/UniSharp/laravel-ckeditor.git",
+            "reference": "5c75f3f9128ec8567955913074795deee5869c5c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/UniSharp/laravel-ckeditor/zipball/5c75f3f9128ec8567955913074795deee5869c5c",
+            "reference": "5c75f3f9128ec8567955913074795deee5869c5c",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "~5.0"
+        },
+        "time": "2017-11-01T04:33:40+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Unisharp\\Ckeditor\\": "./"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+",
+            "LGPL-2.1+",
+            "MPL-1.1+"
+        ],
+        "authors": [
+            {
+                "name": "CKSource",
+                "homepage": "http://cksource.com"
+            },
+            {
+                "name": "UniSharp Ltd. (Composer Package Maintainer)",
+                "homepage": "http://www.unisharp.com"
+            }
+        ],
+        "description": "JavaScript WYSIWYG web text editor (for laravel).",
+        "homepage": "http://ckeditor.com",
+        "keywords": [
+            "CKEditor",
+            "editor",
+            "fckeditor",
+            "html",
+            "javascript",
+            "laravel",
+            "richtext",
+            "text",
+            "wysiwyg"
+        ]
+    },
+    {
         "name": "vlucas/phpdotenv",
         "version": "v2.5.2",
         "version_normalized": "2.5.2.0",
@@ -6206,6 +6760,82 @@
             "assert",
             "check",
             "validate"
+        ]
+    },
+    {
+        "name": "yoeunes/toastr",
+        "version": "v1.2.1",
+        "version_normalized": "1.2.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yoeunes/toastr.git",
+            "reference": "2de7dc6e4997cfc24a40b07085dab32769a7b2d1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yoeunes/toastr/zipball/2de7dc6e4997cfc24a40b07085dab32769a7b2d1",
+            "reference": "2de7dc6e4997cfc24a40b07085dab32769a7b2d1",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/session": "~5.5.0|~5.6.0|~5.7.0|~5.8.0|^6.0",
+            "illuminate/support": "~5.5.0|~5.6.0|~5.7.0|~5.8.0|^6.0",
+            "php": ">=7.0"
+        },
+        "time": "2019-09-06T22:01:27+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Yoeunes\\Toastr\\ToastrServiceProvider"
+                ],
+                "aliases": {
+                    "Toastr": "Yoeunes\\Toastr\\Facades\\Toastr"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Yoeunes\\Toastr\\": "src"
+            },
+            "files": [
+                "src/helpers.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Younes Khoubza",
+                "email": "younes.khoubza@gmail.com",
+                "homepage": "https://github.com/yoeunes",
+                "role": "Developer"
+            }
+        ],
+        "description": "toastr.js flush notifications for Laravel 5 and Lumen",
+        "homepage": "https://github.com/yoeunes/toastr",
+        "keywords": [
+            "alerts",
+            "flush",
+            "flush messages",
+            "flush notifications",
+            "laravel",
+            "laravel 5",
+            "laravel 6",
+            "laravel flush notifications",
+            "laravel notification",
+            "laravel notify",
+            "laravel toastr",
+            "lumen",
+            "messages",
+            "notification",
+            "php",
+            "toastr",
+            "toastr js",
+            "yoeunes"
         ]
     },
     {

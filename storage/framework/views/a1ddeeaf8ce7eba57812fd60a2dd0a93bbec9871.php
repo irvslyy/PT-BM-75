@@ -3,6 +3,8 @@
 
 <div class="container-fluid">
     <div class="row">
+
+
         <div class="col-md-12">
             <form action="<?php echo e(route('project.store')); ?>" method="POST">
             <?php echo csrf_field(); ?>

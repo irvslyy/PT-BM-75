@@ -189,7 +189,7 @@ return [
             'enabled' => true,
 
             'auto_block' => [
-                'attempts' => 5,
+                'attempts' => 3,
                 'frequency' => 1 * 60, // 1 minute
                 'period' => 30 * 60, // 30 minutes
             ],
@@ -349,7 +349,7 @@ return [
             'inspections' => [], // i.e. 'admin'
 
             'auto_block' => [
-                'attempts' => 5,
+                'attempts' => 3,
                 'frequency' => 1 * 60, // 1 minute
                 'period' => 30 * 60, // 30 minutes
             ],

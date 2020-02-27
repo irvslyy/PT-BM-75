@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel">
-                <div class="panel-heading"><div class="panel-title"><h3>masukan barang</h3></div></div>
+                <div class="panel-heading"><h3 class="panel-title">masukan barang</h3></div>
                 <div class="panel-body">
               
                 <form action="{{route('inventorypost')}}" method="POST">
